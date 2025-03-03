@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автонажатие кнопки</title>
+    <title>By: Senya</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,13 +37,18 @@
     <iframe src="https://www.myinstants.com/instant/ia-em-penisy-na-zavtra-79562/embed/" scrolling="no"></iframe>
 </div>
 
-<button id="autoClickButton">Нажми меня!</button>
+<button id="autoClickButton" onclick="buttonClicked()">Нажми меня!</button>
 
 <script>
-    window.onload = function() {
+    function buttonClicked() {
+        alert("Кнопка была нажата!");
+        // Здесь вы можете добавить код, который должен выполняться при нажатии на кнопку
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
         // Имитируем нажатие кнопки
         document.getElementById('autoClickButton').click();
-    };
+    });
 </script>
 
 </body>
