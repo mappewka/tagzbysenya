@@ -7,19 +7,18 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
         }
-        #iframeContainer {
-            display: none; /* Скрываем iframe изначально */
-        }
         button {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            margin-bottom: 20px; /* Отступ между кнопкой и iframe */
         }
     </style>
 </head>
@@ -29,13 +28,6 @@
 <div id="iframeContainer">
     <iframe width="110" height="200" src="https://www.myinstants.com/instant/ston-26273/embed/" frameborder="0" scrolling="no"></iframe>
 </div>
-
-<script>
-    document.getElementById('showIframeButton').onclick = function() {
-        document.getElementById('iframeContainer').style.display = 'block'; // Показываем iframe
-        this.style.display = 'none'; // Скрываем кнопку
-    };
-</script>
 
 </body>
 </html>
