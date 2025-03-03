@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>by senya</title>
+    <title>Iframe Button</title>
     <style>
         body {
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            display: flex; /* Используем flexbox для центрирования */
-            justify-content: center; /* Центрируем по горизонтали */
-            align-items: center; /* Центрируем по вертикали */
-            background-color: #f0f0f0; /* Цвет фона для контраста */
+            margin: 0;
+            background-color: #f0f0f0;
         }
-        iframe {
-            width: 80%; /* Ширина iframe */
-            height: 80%; /* Высота iframe */
-            border: none; /* Убираем рамку */
+        #iframeContainer {
+            display: none; /* Скрываем iframe изначально */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<iframe src="https://www.myinstants.com/instant/ia-em-penisy-na-zavtra-79562/embed/" scrolling="no"></iframe>
+<button id="showIframeButton">Показать Iframe</button>
+<div id="iframeContainer">
+    <iframe width="110" height="200" src="https://www.myinstants.com/instant/ston-26273/embed/" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<script>
+    document.getElementById('showIframeButton').onclick = function() {
+        document.getElementById('iframeContainer').style.display = 'block'; // Показываем iframe
+        this.style.display = 'none'; // Скрываем кнопку
+    };
+</script>
 
 </body>
 </html>
