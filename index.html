@@ -8,18 +8,33 @@
         body {
             margin: 0;
             height: 100vh;
-            overflow: hidden; /* Убираем прокрутку */
+            display: flex; /* Используем flexbox для центрирования */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            background-color: #f0f0f0; /* Цвет фона для контраста */
         }
         iframe {
             width: 100%; /* Ширина iframe на весь экран */
             height: 100%; /* Высота iframe на весь экран */
             border: none; /* Убираем рамку */
         }
+        button {
+            padding: 20px 40px; /* Увеличиваем размеры кнопки */
+            font-size: 18px; /* Размер шрифта кнопки */
+            cursor: pointer; /* Указываем, что это кнопка */
+            background-color: #007bff; /* Цвет фона кнопки */
+            color: white; /* Цвет текста кнопки */
+            border: none; /* Убираем рамку кнопки */
+            border-radius: 5px; /* Закругляем углы кнопки */
+            position: absolute; /* Позволяет разместить кнопку поверх iframe */
+            z-index: 10; /* Устанавливаем уровень наложения выше iframe */
+        }
     </style>
 </head>
 <body>
 
 <iframe src="https://www.myinstants.com/instant/ia-em-penisy-na-zavtra-79562/embed/" scrolling="no"></iframe>
+<button>Нажми меня!</button>
 
 </body>
 </html>
