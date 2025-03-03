@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>By: Senya</title>
+    <title>Автонажатие кнопки</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +26,9 @@
             height: 200px;
             border: none;
         }
+        button {
+            display: none; /* Скрываем кнопку */
+        }
     </style>
 </head>
 <body>
@@ -33,6 +36,15 @@
 <div class="iframe-container">
     <iframe src="https://www.myinstants.com/instant/ia-em-penisy-na-zavtra-79562/embed/" scrolling="no"></iframe>
 </div>
+
+<button id="autoClickButton">Нажми меня!</button>
+
+<script>
+    window.onload = function() {
+        // Имитируем нажатие кнопки
+        document.getElementById('autoClickButton').click();
+    };
+</script>
 
 </body>
 </html>
